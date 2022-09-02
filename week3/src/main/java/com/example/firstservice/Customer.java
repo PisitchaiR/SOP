@@ -7,14 +7,14 @@ public class Customer {
     private int age;
 
     public Customer() {
-        this("", null,false, 0);
+        this("", null,"female", 0);
     }
 
-    public Customer(String Id, String n, boolean s, int a){
-        this.ID = Id;
-        this.name = n;
-        this.sex = s;
-        this.age = a;
+    public Customer(String Id, String n, String s, int a){
+        setID(Id);
+        setName(n);
+        setSex(s);
+        setAge(a);
     }
 
     public String getID() {
@@ -37,24 +37,14 @@ public class Customer {
         return sex;
     }
 
-    public void setSex(String sex) {
-        if(sex.equals("male")){
-            this.sex = true;
-        }else if(sex.equals("female")){
-            this.sex = false;
-        }
-    }
+    public void setSex(String sex) { this.sex = sex.toLowerCase().equals("male");}
 
     public int getAge() {
         return age;
     }
 
     public void setAge(int age) {
-        if(age < 0){
-            this.age = 0;
-        }else {
-            this.age = age;
-        }
+        this.age = Math.max(0, age);
     }
 
     @Override
