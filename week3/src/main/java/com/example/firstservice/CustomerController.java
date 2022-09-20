@@ -20,7 +20,7 @@ public class CustomerController {
     @RequestMapping("/customers")
     public List<Customer> getCustomers() {return this.customers;}
 
-    @RequestMapping("/customers/{id}")
+    @RequestMapping("/customersByID/{id}")
     public Customer getCustomerByID(@PathVariable("id") String ID){
         for (Customer c: getCustomers()){
             if(c.getID().equals(ID)){

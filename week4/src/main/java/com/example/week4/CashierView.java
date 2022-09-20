@@ -39,7 +39,7 @@ public class CashierView extends VerticalLayout {
             int num1 = Integer.parseInt(input.getValue());
             Change out = WebClient.create()
                     .get()
-                    .uri("http://localhost:8080/getChange/"+num1)
+                    .uri("http://localhost:8090/getChange/"+num1)
                     .retrieve()
                     .bodyToMono(Change.class)
                     .block();

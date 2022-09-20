@@ -78,7 +78,7 @@ public class View extends FormLayout {
 
             String out = WebClient.create()
                     .post()
-                    .uri("http://127.0.0.1:8080/max")
+                    .uri("http://127.0.0.1:8090/max")
                     .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                     .body(BodyInserters.fromFormData(formData))
                     .retrieve()
@@ -92,7 +92,7 @@ public class View extends FormLayout {
     private void getPlus(double num1, double num2) {
         String out = WebClient.create()
                 .get()
-                .uri("http://127.0.0.1:8080/plus/"+num1+"/"+num2)
+                .uri("http://127.0.0.1:8090/plus/"+num1+"/"+num2)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -103,7 +103,7 @@ public class View extends FormLayout {
     private void getMinus(double num1, double num2){
         String out = WebClient.create()
                 .get()
-                .uri("http://127.0.0.1:8080/minus/"+num1+"/"+num2)
+                .uri("http://127.0.0.1:8090/minus/"+num1+"/"+num2)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -114,7 +114,7 @@ public class View extends FormLayout {
     private void getDivide(double num1, double num2){
         String out = WebClient.create()
                 .get()
-                .uri("http://127.0.0.1:8080/divide/"+num1+"/"+num2)
+                .uri("http://127.0.0.1:8090/divide/"+num1+"/"+num2)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -125,7 +125,7 @@ public class View extends FormLayout {
     private void getMulit(double num1, double num2){
         String out = WebClient.create()
                 .get()
-                .uri("http://127.0.0.1:8080/multi/"+num1+"/"+num2)
+                .uri("http://127.0.0.1:8090/multi/"+num1+"/"+num2)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -136,7 +136,7 @@ public class View extends FormLayout {
     private void getMod(double num1, double num2){
         String out = WebClient.create()
                 .get()
-                .uri("http://127.0.0.1:8080/mod/"+num1+"/"+num2)
+                .uri("http://127.0.0.1:8090/mod/"+num1+"/"+num2)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
