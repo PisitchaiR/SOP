@@ -120,6 +120,13 @@ public class MainWizardView extends VerticalLayout {
                     .retrieve()
                     .bodyToMono(Wizard.class)
                     .block();
+
+            tName.setValue("");
+            posiBox.setValue("");
+            tDollar.setValue("");
+            schoolBox.setValue("");
+            houseBox.setValue("");
+
             Notification.show("Wizard has been Created", 5000, Notification.Position.BOTTOM_START);
         });
 
@@ -138,6 +145,13 @@ public class MainWizardView extends VerticalLayout {
                    .retrieve()
                    .bodyToMono(Wizard.class)
                    .block();
+
+            tName.setValue("");
+            posiBox.setValue("");
+            tDollar.setValue("");
+            schoolBox.setValue("");
+            houseBox.setValue("");
+
             Notification.show("Wizard has been Updated", 5000, Notification.Position.BOTTOM_START);
         });
 
@@ -155,6 +169,13 @@ public class MainWizardView extends VerticalLayout {
             }catch (NullPointerException err){
                 System.out.println("Error");
             }
+
+            tName.setValue("");
+            posiBox.setValue("");
+            tDollar.setValue("");
+            schoolBox.setValue("");
+            houseBox.setValue("");
+
             Notification.show("Wizard has been Removed", 5000, Notification.Position.BOTTOM_START);
         });
     }
