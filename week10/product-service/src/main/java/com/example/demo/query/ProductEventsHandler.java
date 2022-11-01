@@ -1,6 +1,6 @@
 package com.example.demo.query;
 
-import com.example.demo.core.ProductEnity;
+import com.example.demo.core.ProductEntity;
 import com.example.demo.core.data.ProductRepository;
 import com.example.demo.core.event.ProductCreateEvent;
 import org.axonframework.eventhandling.EventHandler;
@@ -18,8 +18,8 @@ public class ProductEventsHandler {
 
     @EventHandler
     public  void on(ProductCreateEvent event){
-        ProductEnity productEnity = new ProductEnity();
-        BeanUtils.copyProperties(event, productEnity);
-        productRepository.save(productEnity);
+        ProductEntity productEntity = new ProductEntity();
+        BeanUtils.copyProperties(event, productEntity);
+        productRepository.save(productEntity);
     }
 }
