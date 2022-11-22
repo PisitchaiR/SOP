@@ -9,6 +9,15 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: authService
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+        - id: userService
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
 
 jwt:
   secret: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0K2mJ3pd3YG41xA9i8bj6OTbadwezxgeEByY
